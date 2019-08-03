@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Loader</title>
+	<style>
+		.preloader{
+			position: fixed;
+			background-color: #fefefe;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 9999;
+		}
+		.preloader > div{
+			position: relative;
+			left: 50%;
+			top: 50vh;
+			margin: -100px 0 0 -100px;
+		}
+		.preloader i{
+			font-size: 200px;
+			color: #ccc;
+		}
+	</style>
+	<!-- <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="loading.css"> -->
+</head>
+<body>
+
+	<div class="preloader">
+		<div>
+			<img src="img/clock.svg" alt="">
+			<!-- <i class="fa fa-coffee ld ld-wander-h" aria-hidden="true"></i> -->
+			<!-- <i class="ld-spinner ld ld-cycle x2"></i> -->
+		</div>
+	</div>
+	
+	<section id="section1"></section>
+	<section id="section2"></section>
+	<section id="section3"></section>
+	
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+		$(window).on('load', function(){
+			$('.preloader').delay(1000).fadeOut('slow');
+		});
+	</script>
+</body>
+</html>
